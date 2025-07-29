@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive To-Do List</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+  <div class="todo-container">
+    <div class="header">
+      <h1>📝 My To-Do List</h1>
+      <button id="toggleTheme" title="Toggle Theme">🌙</button>
+    </div>
+
+    <div class="input-group">
+      <input type="text" id="taskInput" placeholder="Enter a task...">
+      <button id="addTaskBtn">Add</button>
+    </div>
+
+    <div class="filter-bar">
+      <button onclick="filterTasks('all')">All</button>
+      <button onclick="filterTasks('active')">Active</button>
+      <button onclick="filterTasks('completed')">Completed</button>
+    </div>
+
+    <p id="progressText">0 of 0 tasks completed</p>
+    <progress id="progressBar" value="0" max="0"></progress>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="type.js"></script>
+</body>
+</html>
+nh
